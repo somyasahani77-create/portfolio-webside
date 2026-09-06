@@ -1,157 +1,807 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SomyaRanjan Sahani — Designer Portfolio</title>
-<style>
-:root{
-  --bg:#090a0f; --panel:#11131b; --text:#f5f5f7; --muted:#a7a9b4;
-  --line:#252834; --accent:#8b7cff; --accent2:#5ee7d0;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-a{color:inherit;text-decoration:none}
-.container{width:min(1120px,92%);margin:auto}
-nav{position:sticky;top:0;z-index:20;background:rgba(9,10,15,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:800;letter-spacing:.4px}.logo span{color:var(--accent)}
-.links{display:flex;gap:25px;color:var(--muted);font-size:14px}
-.links a:hover{color:var(--text)}
-.hero{min-height:78vh;display:grid;place-items:center;padding:90px 0 70px}
-.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:60px;align-items:center}
-.eyebrow{color:var(--accent2);font-size:13px;text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-bottom:18px}
-h1{font-size:clamp(44px,7vw,78px);line-height:1.02;letter-spacing:-3px;max-width:850px}
-h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{color:var(--muted);font-size:18px;max-width:650px;margin:24px 0 32px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:13px 20px;border:1px solid var(--line);border-radius:10px;font-weight:700;font-size:14px}
-.btn.primary{background:var(--text);color:#090a0f;border-color:var(--text)}
-.profile-card{height:330px;border:1px solid var(--line);border-radius:24px;background:radial-gradient(circle at 30% 20%,#20243a,transparent 48%),var(--panel);display:flex;align-items:end;padding:25px}
-.profile-card strong{font-size:18px}.profile-card small{display:block;color:var(--muted);margin-top:4px}
-section{padding:90px 0;border-top:1px solid var(--line)}
-.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}
-.kicker{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
-h2{font-size:38px;line-height:1.1;letter-spacing:-1px;margin-top:8px}
-.section-head p{color:var(--muted);max-width:520px}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:45px}
-.about p{color:var(--muted);font-size:17px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:28px}
-.card h3{margin:12px 0 8px;font-size:21px}
-.card p{color:var(--muted);font-size:14px}
-.price{margin-top:22px;font-weight:800;font-size:17px}
-.price span{color:var(--muted);font-weight:500;font-size:12px}
-.skills{display:flex;flex-wrap:wrap;gap:10px}
-.skill{border:1px solid var(--line);background:var(--panel);padding:10px 15px;border-radius:999px;color:#d8d9df;font-size:14px}
-.project{min-height:220px;display:flex;flex-direction:column;justify-content:space-between}
-.project .tag{color:var(--accent2);font-size:12px;text-transform:uppercase;letter-spacing:1.5px;font-weight:700}
-.project p{margin-top:10px}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.contact-box{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:30px}
-.contact-item{padding:14px 0;border-bottom:1px solid var(--line)}
-.contact-item:last-child{border-bottom:0}
-.contact-item small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1.5px}
-.contact-item a:hover{color:var(--accent2)}
-footer{padding:30px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between}
-@media(max-width:800px){
- .links{display:none}.hero-grid,.about,.contact{grid-template-columns:1fr}
- .grid{grid-template-columns:1fr}.hero{padding-top:65px}h1{letter-spacing:-2px}
- .profile-card{height:240px}.section-head{display:block}.section-head p{margin-top:15px}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SomyaRanjan Sahani | Creative Designer</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #080b12;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #0d111a;
+      border-bottom: 1px solid #202838;
+      padding: 14px 6%;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .logo img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    ul a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    ul a:hover {
+      color: #38a9ff;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #168cff;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #0877df;
+    }
+
+    section {
+      padding: 75px 6%;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .hero-text {
+      max-width: 650px;
+    }
+
+    .hero small {
+      color: #38a9ff;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 75px);
+      line-height: 1.05;
+      margin: 15px 0;
+    }
+
+    .blue {
+      color: #38a9ff;
+    }
+
+    .hero p {
+      color: #aeb8c8;
+      font-size: 18px;
+      margin-bottom: 28px;
+    }
+
+    .hero img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 25px;
+      border: 2px solid #168cff;
+    }
+
+    /* TITLES */
+
+    .title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .title h2 {
+      font-size: 38px;
+      margin-bottom: 8px;
+    }
+
+    .title p {
+      color: #9da8ba;
+    }
+
+    /* ABOUT */
+
+    .about {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #c4ccda;
+    }
+
+    .about h3 {
+      color: #38a9ff;
+      font-size: 24px;
+      margin-top: 30px;
+      margin-bottom: 8px;
+    }
+
+    /* CARDS */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #101622;
+      border: 1px solid #202b3d;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    .card h3 {
+      color: #38a9ff;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #b4bdcc;
+    }
+
+    /* SKILLS */
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .skill {
+      background: #101622;
+      border: 1px solid #263449;
+      padding: 12px 18px;
+      border-radius: 30px;
+      color: #dbe4f2;
+    }
+
+    /* PRICING */
+
+    .price {
+      font-size: 25px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    /* CONTACT */
+
+    .contact-box {
+      max-width: 750px;
+      margin: auto;
+      display: grid;
+      gap: 15px;
+    }
+
+    .contact-item {
+      background: #101622;
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid #202b3d;
+    }
+
+    .contact-item a {
+      color: #38a9ff;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    /* FORM */
+
+    form {
+      max-width: 700px;
+      margin: auto;
+      background: #101622;
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid #202b3d;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 13px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #303b4d;
+      background: #080b12;
+      color: white;
+      font-size: 15px;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #0d111a;
+      color: #9da8ba;
+      border-top: 1px solid #202838;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      header {
+        position: relative;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .hero {
+        min-height: auto;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 60px;
+      }
+
+      .hero img {
+        width: 240px;
+        height: 240px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<nav>
-  <div class="container nav">
-    <div class="logo">Somya<span>.</span></div>
-    <div class="links">
-      <a href="#about">About</a><a href="#services">Services</a><a href="#skills">Skills</a>
-      <a href="#work">Work</a><a href="#contact">Contact</a>
-    </div>
-  </div>
-</nav>
+  <!-- ================= NAVBAR ================= -->
 
-<header class="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="eyebrow">Independent Designer</div>
-      <h1>Design that looks <span>as good as it works.</span></h1>
-      <p>I'm SomyaRanjan Sahani — a Web, Graphic & Logo Designer creating clean, modern and professional digital experiences.</p>
-      <div class="buttons">
-        <a class="btn primary" href="#work">View My Work</a>
-        <a class="btn" href="#contact">Start a Project</a>
+  <header>
+    <nav>
+
+      <div class="logo">
+        <img src="srs.pm.jpeg" alt="SomyaRanjan Logo">
+        <span>SomyaRanjan</span>
       </div>
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="#register" class="btn">Register</a>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+
+  <!-- ================= HOME ================= -->
+
+  <section id="home" class="hero">
+
+    <div class="hero-text">
+
+      <small>CREATIVE DESIGNER</small>
+
+      <h1>
+        Hi, I'm
+        <span class="blue">SomyaRanjan Sahani</span>
+      </h1>
+
+      <p>
+        I create modern websites, graphics and logos
+        with a clean, professional and creative approach.
+      </p>
+
+      <a href="#register" class="btn">
+        Start Your Project
+      </a>
+
     </div>
-    <div class="profile-card">
-      <div><strong>SomyaRanjan Sahani</strong><small>Web • Graphic • Logo Designer</small></div>
+
+    <img
+      src="somya.pm.jpeg"
+      alt="SomyaRanjan Sahani"
+    >
+
+  </section>
+
+
+  <!-- ================= ABOUT ================= -->
+
+  <section id="about">
+
+    <div class="title">
+      <h2>Who I Am</h2>
     </div>
-  </div>
-</header>
 
-<section id="about">
-<div class="container">
-  <div class="section-head"><div><div class="kicker">About</div><h2>Creative, practical & detail-focused.</h2></div></div>
-  <div class="about">
-    <p>I create clean, modern and visually engaging digital designs with a strong focus on professional presentation. My work spans web design, graphic design and logo design.</p>
-    <p>I enjoy turning ideas into polished digital experiences that are simple, memorable and effective, while continuously developing my design and technology skills.</p>
-  </div>
-</div>
-</section>
+    <div class="about">
 
-<section id="services">
-<div class="container">
-  <div class="section-head"><div><div class="kicker">Services</div><h2>What I can create.</h2></div><p>Clear services with straightforward starting ranges. Final pricing can vary with project scope and requirements.</p></div>
-  <div class="grid">
-    <article class="card"><div>✦</div><h3>Logo Design</h3><p>Creative, memorable logo concepts designed to build a strong visual identity.</p><div class="price">₹700 – ₹1,800</div></article>
-    <article class="card"><div>◈</div><h3>Graphic Design</h3><p>Professional social media creatives, posters, banners and promotional graphics.</p><div class="price">₹1,200 – ₹3,500</div></article>
-    <article class="card"><div>⌘</div><h3>Web Design</h3><p>Modern, responsive and user-focused websites for personal brands, businesses and projects.</p><div class="price">₹5,000 – ₹20,000+</div></article>
-  </div>
-</div>
-</section>
+      <p>
+        I'm <b>SomyaRanjan Sahani</b>, a creative designer focused on
+        Web Design, Graphic Design and Logo Design. I combine modern
+        aesthetics with practical design to create work that looks
+        professional and communicates clearly.
+      </p>
 
-<section id="skills">
-<div class="container">
-  <div class="section-head"><div><div class="kicker">Skills</div><h2>Tools & capabilities.</h2></div></div>
-  <div class="skills">
-    <div class="skill">Web Designing</div><div class="skill">Graphic Designing</div><div class="skill">Logo Designing</div>
-    <div class="skill">HTML</div><div class="skill">Java</div><div class="skill">SQL</div><div class="skill">Python</div>
-  </div>
-</div>
-</section>
+      <h3>Education</h3>
 
-<section id="work">
-<div class="container">
-  <div class="section-head"><div><div class="kicker">Selected Work</div><h2>Projects coming together.</h2></div><p>Replace these placeholders with real project screenshots, links and short case studies as your portfolio grows.</p></div>
-  <div class="grid">
-    <article class="card project"><div><div class="tag">Web Design</div><h3>Project One</h3><p>Website design showcase — add your project image, description and live link here.</p></div><div>→</div></article>
-    <article class="card project"><div><div class="tag">Graphic Design</div><h3>Project Two</h3><p>Creative graphic showcase — add your strongest poster, banner or social media work.</p></div><div>→</div></article>
-    <article class="card project"><div><div class="tag">Logo Design</div><h3>Project Three</h3><p>Brand identity showcase — add your best logo concept and a short project story.</p></div><div>→</div></article>
-  </div>
-</div>
-</section>
+      <p>
+        <b>B.Tech — Computer Science Engineering</b><br>
+        2nd Year
+      </p>
 
-<section id="contact">
-<div class="container">
-  <div class="section-head"><div><div class="kicker">Contact</div><h2>Let's build something great.</h2></div><p>Have a project or design idea? Get in touch and let's discuss what you need.</p></div>
-  <div class="contact">
+      <p style="margin-top:20px;">
+        Along with my technical background, I continuously work on
+        improving my design and creative skills.
+      </p>
+
+    </div>
+
+
+    <!-- WHAT I CAN DO FOR YOU -->
+
+    <div class="title" style="margin-top:60px;">
+
+      <h2>What I Can Do For You</h2>
+
+      <p>
+        Creative solutions designed around your needs.
+      </p>
+
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>🌐 Web Design</h3>
+
+        <p>
+          I can create clean, modern and responsive websites
+          that give your brand a professional online presence.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <h3>🎨 Graphic Design</h3>
+
+        <p>
+          I can design posters, banners, social media graphics
+          and other visual content for your brand.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <h3>✦ Logo Design</h3>
+
+        <p>
+          I can create simple, unique and professional logos
+          that represent your brand identity.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= SKILLS ================= -->
+
+  <section id="skills">
+
+    <div class="title">
+
+      <h2>My Skills</h2>
+
+      <p>
+        Creative and technical skills.
+      </p>
+
+    </div>
+
+    <div class="skills">
+
+      <div class="skill">Web Designing</div>
+      <div class="skill">Graphic Designing</div>
+      <div class="skill">Logo Design</div>
+      <div class="skill">HTML</div>
+      <div class="skill">Java</div>
+      <div class="skill">SQL</div>
+      <div class="skill">Python</div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= SERVICES ================= -->
+
+  <section id="services">
+
+    <div class="title">
+
+      <h2>My Services</h2>
+
+      <p>
+        Professional design services for your ideas.
+      </p>
+
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+
+        <h3>Web Design</h3>
+
+        <p>
+          Modern, responsive and user-friendly website designs.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>Graphic Design</h3>
+
+        <p>
+          Posters, banners, social media graphics and
+          creative visual content.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>Logo Design</h3>
+
+        <p>
+          Clean, unique and memorable logos for your brand.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= PRICING ================= -->
+
+  <section id="pricing">
+
+    <div class="title">
+
+      <h2>Pricing</h2>
+
+      <p>
+        Starting prices. Final price depends on project requirements.
+      </p>
+
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+
+        <h3>Logo Design</h3>
+
+        <div class="price">
+          ₹700 – ₹1,800
+        </div>
+
+        <p>
+          Professional custom logo design.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>Graphic Design</h3>
+
+        <div class="price">
+          ₹1,200 – ₹3,500
+        </div>
+
+        <p>
+          Posters, banners and social media graphics.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>Web Design</h3>
+
+        <div class="price">
+          ₹5,000 – ₹20,000+
+        </div>
+
+        <p>
+          Responsive and modern website design.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CONTACT ================= -->
+
+  <section id="contact">
+
+    <div class="title">
+
+      <h2>Contact Me</h2>
+
+      <p>
+        Let's discuss your next project.
+      </p>
+
+    </div>
+
     <div class="contact-box">
-      <div class="contact-item"><small>Email</small><a href="mailto:sahanisomya777@gmail.com">sahanisomya777@gmail.com</a></div>
-      <div class="contact-item"><small>Phone</small><a href="tel:+917894742065">+91 78947 42065</a></div>
-    </div>
-    <div class="contact-box">
-      <div class="contact-item"><small>Instagram</small><a href="https://www.instagram.com/__somya__x__.__x/" target="_blank">__somya__x__.__x</a></div>
-      <div class="contact-item"><small>LinkedIn</small><span style="color:#a7a9b4">Add your LinkedIn profile link</span></div>
-      <div class="contact-item"><small>Portfolio</small><span style="color:#a7a9b4">This website link will be added after publishing</span></div>
-    </div>
-  </div>
-</div>
-</section>
 
-<footer class="container">
-  <span>© 2026 SomyaRanjan Sahani</span><span>Web • Graphic • Logo Designer</span>
-</footer>
+      <div class="contact-item">
+
+        📧 <b>Email:</b>
+
+        <a href="mailto:sahanisomya777@gmail.com">
+          sahanisomya777@gmail.com
+        </a>
+
+      </div>
+
+
+      <div class="contact-item">
+
+        📱 <b>Phone:</b>
+
+        <a href="tel:+919078508209">
+          +91 90785 08209
+        </a>
+
+      </div>
+
+
+      <div class="contact-item">
+
+        📸 <b>Instagram:</b>
+
+        <a
+          href="https://www.instagram.com/srs.degine?stkn=OXAzeXM5NXFwNXlq"
+          target="_blank"
+        >
+          @srs.degine
+        </a>
+
+      </div>
+
+
+      <div class="contact-item">
+
+        💼 <b>LinkedIn:</b>
+
+        <a
+          href="https://www.linkedin.com/in/sahani-somya-394a57402?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+          target="_blank"
+        >
+          Sahani Somya
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= START YOUR PROJECT / REGISTER ================= -->
+
+  <section id="register">
+
+    <div class="title">
+
+      <h2>Start Your Project</h2>
+
+      <p>
+        Tell me about your project and let's get started.
+      </p>
+
+    </div>
+
+
+    <form
+      action="https://formsubmit.co/sahanisomya777@gmail.com"
+      method="POST"
+    >
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="New Portfolio Project Registration"
+      >
+
+      <input
+        type="hidden"
+        name="_captcha"
+        value="false"
+      >
+
+      <input
+        type="hidden"
+        name="_template"
+        value="table"
+      >
+
+
+      <input
+        type="text"
+        name="Full Name"
+        placeholder="Full Name"
+        required
+      >
+
+
+      <input
+        type="email"
+        name="Email"
+        placeholder="Email Address"
+        required
+      >
+
+
+      <input
+        type="tel"
+        name="Phone"
+        placeholder="Phone Number with Country Code"
+        required
+      >
+
+
+      <input
+        type="text"
+        name="Country"
+        placeholder="Country"
+        required
+      >
+
+
+      <input
+        type="text"
+        name="State"
+        placeholder="State"
+        required
+      >
+
+
+      <select name="Service" required>
+
+        <option value="">
+          Select Service
+        </option>
+
+        <option value="Logo Design">
+          Logo Design
+        </option>
+
+        <option value="Graphic Design">
+          Graphic Design
+        </option>
+
+        <option value="Web Design">
+          Web Design
+        </option>
+
+      </select>
+
+
+      <textarea
+        name="Project Details"
+        placeholder="Tell me about your project..."
+        required
+      ></textarea>
+
+
+      <button
+        type="submit"
+        class="btn"
+      >
+        Register / Send Project
+      </button>
+
+    </form>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <p>
+      © 2026 SomyaRanjan Sahani. All Rights Reserved.
+    </p>
+
+  </footer>
+
 </body>
 </html>
