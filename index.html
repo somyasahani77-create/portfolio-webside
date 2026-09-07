@@ -4,9 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>SomyaRanjan Sahani | Creative Designer</title>
+  <title>SRS | SomyaRanjan Sahani — Web & Creative Designer</title>
+
+  <meta
+    name="description"
+    content="SomyaRanjan Sahani — Web Designer, Graphic Designer and Logo Designer. Explore my portfolio, services, projects and pricing."
+  >
+
+  <meta name="theme-color" content="#080b12">
 
   <style>
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
     * {
       margin: 0;
       padding: 0;
@@ -14,794 +26,2862 @@
       scroll-behavior: smooth;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #080b12;
-      color: #ffffff;
-      line-height: 1.6;
+    :root {
+      --bg: #080b12;
+      --bg2: #0d111a;
+      --card: #101622;
+      --border: #202b3d;
+      --text: #ffffff;
+      --muted: #aeb8c8;
+      --blue: #38a9ff;
+      --blue2: #168cff;
+      --blue-dark: #0877df;
+      --success: #25d366;
+      --max: 1200px;
     }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font-family: inherit;
+    }
+
+
+    /* =====================================================
+       HEADER / NAVBAR
+    ===================================================== */
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: #0d111a;
-      border-bottom: 1px solid #202838;
+      background: rgba(13, 17, 26, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
       padding: 14px 6%;
     }
 
     nav {
+      max-width: var(--max);
+      margin: auto;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      gap: 25px;
     }
 
     .logo {
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 20px;
-      font-weight: bold;
+
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: 1px;
+
+      text-decoration: none;
+      white-space: nowrap;
     }
 
     .logo img {
-      width: 42px;
-      height: 42px;
+      width: 44px;
+      height: 44px;
+
       border-radius: 50%;
       object-fit: cover;
+
+      border: 2px solid var(--blue);
     }
 
-    ul {
+    .logo span {
+      color: #ffffff;
+    }
+
+    nav ul {
       list-style: none;
+
       display: flex;
       align-items: center;
-      gap: 18px;
+      justify-content: center;
+
+      gap: 20px;
     }
 
-    ul a {
-      color: white;
+    nav ul a {
+      color: #ffffff;
       text-decoration: none;
-      font-size: 15px;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      transition: 0.3s ease;
     }
 
-    ul a:hover {
-      color: #38a9ff;
+    nav ul a:hover {
+      color: var(--blue);
     }
+
+
+    /* =====================================================
+       BUTTONS
+    ===================================================== */
 
     .btn {
-      display: inline-block;
-      background: #168cff;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--blue2);
+      color: #ffffff;
+
+      padding: 13px 21px;
+
+      border-radius: 9px;
+
       text-decoration: none;
-      border: none;
+      border: 1px solid transparent;
+
       cursor: pointer;
-      font-weight: bold;
+
+      font-weight: 700;
+      font-size: 14px;
+
+      transition: 0.3s ease;
     }
 
     .btn:hover {
-      background: #0877df;
+      background: var(--blue-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(22, 140, 255, 0.18);
     }
+
+    .btn-outline {
+      background: transparent;
+      border-color: var(--border);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--blue);
+      background: rgba(56, 169, 255, 0.08);
+    }
+
+    .whatsapp-btn {
+      background: var(--success);
+    }
+
+    .whatsapp-btn:hover {
+      background: #1fb956;
+    }
+
+
+    /* =====================================================
+       GENERAL SECTION
+    ===================================================== */
 
     section {
-      padding: 75px 6%;
+      padding: 95px 6%;
     }
 
-    /* HERO */
-
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 40px;
+    .section-inner {
+      max-width: var(--max);
+      margin: auto;
     }
-
-    .hero-text {
-      max-width: 650px;
-    }
-
-    .hero small {
-      color: #38a9ff;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    .hero h1 {
-      font-size: clamp(42px, 7vw, 75px);
-      line-height: 1.05;
-      margin: 15px 0;
-    }
-
-    .blue {
-      color: #38a9ff;
-    }
-
-    .hero p {
-      color: #aeb8c8;
-      font-size: 18px;
-      margin-bottom: 28px;
-    }
-
-    .hero img {
-      width: 300px;
-      height: 300px;
-      object-fit: cover;
-      border-radius: 25px;
-      border: 2px solid #168cff;
-    }
-
-    /* TITLES */
 
     .title {
       text-align: center;
-      margin-bottom: 35px;
+      margin-bottom: 50px;
+    }
+
+    .title small {
+      color: var(--blue);
+      font-weight: 800;
+      letter-spacing: 2px;
     }
 
     .title h2 {
-      font-size: 38px;
-      margin-bottom: 8px;
+      font-size: clamp(32px, 5vw, 46px);
+      margin: 8px 0 12px;
+
+      line-height: 1.1;
     }
 
     .title p {
-      color: #9da8ba;
-    }
-
-    /* ABOUT */
-
-    .about {
-      max-width: 850px;
+      color: var(--muted);
+      max-width: 650px;
       margin: auto;
-      text-align: center;
-      color: #c4ccda;
     }
 
-    .about h3 {
-      color: #38a9ff;
-      font-size: 24px;
-      margin-top: 30px;
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+      min-height: calc(100vh - 75px);
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 70px;
+
+      max-width: var(--max);
+      margin: auto;
+    }
+
+    .hero-text {
+      flex: 1;
+      max-width: 720px;
+    }
+
+    .hero small {
+      color: var(--blue);
+      font-weight: 800;
+      letter-spacing: 3px;
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 7vw, 78px);
+      line-height: 1.02;
+
+      margin: 18px 0;
+    }
+
+    .blue {
+      color: var(--blue);
+    }
+
+    .hero p {
+      color: var(--muted);
+
+      font-size: 18px;
+
+      max-width: 650px;
+
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-trust {
+      margin-top: 25px;
+
+      color: #8290a5;
+
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .hero-image {
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .hero-image::before {
+      content: "";
+
+      position: absolute;
+      inset: -15px;
+
+      border: 1px solid rgba(56, 169, 255, 0.2);
+
+      border-radius: 35px;
+
+      z-index: -1;
+    }
+
+    .hero-image img {
+      width: 330px;
+      height: 330px;
+
+      object-fit: cover;
+
+      border-radius: 28px;
+
+      border: 2px solid var(--blue);
+
+      box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45),
+        0 0 40px rgba(56, 169, 255, 0.12);
+    }
+
+
+    /* =====================================================
+       ABOUT
+    ===================================================== */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+
+      gap: 50px;
+
+      align-items: center;
+    }
+
+    .about-text {
+      color: #c4ccda;
+
+      font-size: 16px;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+    }
+
+    .about-text strong {
+      color: #ffffff;
+    }
+
+    .about-highlight {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--border);
+
+      border-radius: 16px;
+      padding: 22px;
+
+      transition: 0.3s ease;
+    }
+
+    .stat:hover {
+      border-color: rgba(56, 169, 255, 0.55);
+      transform: translateY(-4px);
+    }
+
+    .stat-icon {
+      font-size: 25px;
       margin-bottom: 8px;
     }
 
-    /* CARDS */
+    .stat h3 {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .stat p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+
+    /* =====================================================
+       CARDS
+    ===================================================== */
 
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+
+      gap: 22px;
+
+      max-width: var(--max);
+      margin: auto;
     }
 
     .card {
-      background: #101622;
-      border: 1px solid #202b3d;
-      padding: 25px;
-      border-radius: 15px;
+      background: var(--card);
+
+      border: 1px solid var(--border);
+
+      padding: 28px;
+
+      border-radius: 18px;
+
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+
+      border-color: rgba(56, 169, 255, 0.5);
+
+      box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.25);
+    }
+
+    .card-icon {
+      font-size: 32px;
+      margin-bottom: 15px;
     }
 
     .card h3 {
-      color: #38a9ff;
-      margin-bottom: 10px;
+      color: var(--blue);
+
+      margin-bottom: 12px;
+
+      font-size: 21px;
     }
 
     .card p {
-      color: #b4bdcc;
+      color: var(--muted);
+      font-size: 15px;
     }
 
-    /* SKILLS */
+    .card ul {
+      list-style: none;
+
+      margin: 20px 0;
+    }
+
+    .card ul li {
+      color: #dbe4f2;
+
+      margin: 9px 0;
+
+      font-size: 14px;
+    }
+
+    .card ul li::before {
+      content: "✓";
+
+      color: var(--blue);
+
+      font-weight: bold;
+
+      margin-right: 8px;
+    }
+
+    .starting {
+      margin-top: 18px;
+
+      font-size: 18px;
+
+      font-weight: 800;
+
+      color: #ffffff;
+    }
+
+
+    /* =====================================================
+       SKILLS
+    ===================================================== */
+
+    .skill-groups {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 22px;
+
+      max-width: var(--max);
+      margin: auto;
+    }
+
+    .skill-group {
+      background: var(--card);
+
+      border: 1px solid var(--border);
+
+      border-radius: 18px;
+
+      padding: 25px;
+    }
+
+    .skill-group h3 {
+      margin-bottom: 18px;
+
+      color: var(--blue);
+    }
 
     .skills {
       display: flex;
+
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
+
+      gap: 10px;
     }
 
     .skill {
-      background: #101622;
+      background: #0b111c;
+
       border: 1px solid #263449;
-      padding: 12px 18px;
+
+      padding: 9px 14px;
+
       border-radius: 30px;
+
       color: #dbe4f2;
+
+      font-size: 13px;
     }
 
-    /* PRICING */
+
+    /* =====================================================
+       PROJECTS
+    ===================================================== */
+
+    .projects {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 22px;
+
+      max-width: var(--max);
+      margin: auto;
+    }
+
+    .project {
+      background: var(--card);
+
+      border: 1px solid var(--border);
+
+      border-radius: 18px;
+
+      padding: 28px;
+
+      transition: 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+
+      border-color: rgba(56, 169, 255, 0.5);
+    }
+
+    .project-number {
+      color: var(--blue);
+
+      font-weight: 800;
+
+      font-size: 13px;
+
+      letter-spacing: 2px;
+    }
+
+    .project h3 {
+      margin: 10px 0;
+
+      font-size: 24px;
+    }
+
+    .project p {
+      color: var(--muted);
+
+      margin-bottom: 18px;
+    }
+
+    .project-meta {
+      color: #8c9ab0;
+
+      font-size: 13px;
+
+      margin-bottom: 20px;
+    }
+
+    .project-link {
+      color: var(--blue);
+
+      text-decoration: none;
+
+      font-weight: 700;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+
+    /* =====================================================
+       PRICING
+    ===================================================== */
+
+    .pricing {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 22px;
+
+      max-width: var(--max);
+      margin: auto;
+    }
+
+    .price-card {
+      position: relative;
+
+      background: var(--card);
+
+      border: 1px solid var(--border);
+
+      padding: 30px;
+
+      border-radius: 18px;
+    }
+
+    .price-card.popular {
+      border-color: var(--blue);
+
+      box-shadow:
+        0 0 35px rgba(56, 169, 255, 0.08);
+    }
+
+    .popular-badge {
+      position: absolute;
+
+      top: 16px;
+      right: 16px;
+
+      background: var(--blue);
+
+      color: white;
+
+      padding: 5px 10px;
+
+      border-radius: 20px;
+
+      font-size: 11px;
+
+      font-weight: 800;
+    }
+
+    .price-card h3 {
+      color: var(--blue);
+
+      margin-bottom: 12px;
+    }
 
     .price {
-      font-size: 25px;
-      font-weight: bold;
-      margin: 15px 0;
+      font-size: 32px;
+
+      font-weight: 900;
+
+      margin: 12px 0 20px;
     }
 
-    /* CONTACT */
+    .price-card ul {
+      list-style: none;
 
-    .contact-box {
-      max-width: 750px;
-      margin: auto;
+      margin-bottom: 25px;
+    }
+
+    .price-card li {
+      color: var(--muted);
+
+      margin: 10px 0;
+
+      font-size: 14px;
+    }
+
+    .price-card li::before {
+      content: "✓";
+
+      color: var(--blue);
+
+      margin-right: 8px;
+    }
+
+    .pricing-note {
+      text-align: center;
+
+      color: #7f8ca0;
+
+      margin-top: 22px;
+
+      font-size: 13px;
+    }
+
+
+    /* =====================================================
+       HOW IT WORKS
+    ===================================================== */
+
+    .steps {
       display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 18px;
+
+      max-width: var(--max);
+      margin: auto;
+    }
+
+    .step {
+      background: var(--card);
+
+      border: 1px solid var(--border);
+
+      border-radius: 18px;
+
+      padding: 25px;
+    }
+
+    .step-number {
+      color: var(--blue);
+
+      font-size: 13px;
+
+      font-weight: 900;
+
+      letter-spacing: 2px;
+    }
+
+    .step h3 {
+      margin: 12px 0 8px;
+
+      font-size: 18px;
+    }
+
+    .step p {
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+
+    /* =====================================================
+       FORM
+    ===================================================== */
+
+    .form-wrapper {
+      max-width: 780px;
+
+      margin: auto;
+    }
+
+    form {
+      background: var(--card);
+
+      padding: 30px;
+
+      border-radius: 20px;
+
+      border: 1px solid var(--border);
+    }
+
+    .form-row {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
       gap: 15px;
     }
 
-    .contact-item {
-      background: #101622;
-      padding: 18px;
-      border-radius: 12px;
-      border: 1px solid #202b3d;
-    }
+    label {
+      display: block;
 
-    .contact-item a {
-      color: #38a9ff;
-      text-decoration: none;
-      word-break: break-word;
-    }
+      color: #dbe4f2;
 
-    /* FORM */
+      font-size: 13px;
 
-    form {
-      max-width: 700px;
-      margin: auto;
-      background: #101622;
-      padding: 25px;
-      border-radius: 15px;
-      border: 1px solid #202b3d;
+      font-weight: 700;
+
+      margin-bottom: 7px;
     }
 
     input,
     select,
     textarea {
       width: 100%;
-      padding: 13px;
-      margin-bottom: 15px;
-      border-radius: 8px;
+
+      padding: 14px;
+
+      margin-bottom: 17px;
+
+      border-radius: 9px;
+
       border: 1px solid #303b4d;
+
       background: #080b12;
+
       color: white;
-      font-size: 15px;
+
+      font-size: 14px;
+
+      outline: none;
+
+      transition: 0.25s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--blue);
+
+      box-shadow:
+        0 0 0 3px rgba(56, 169, 255, 0.08);
+    }
+
+    select option {
+      background: #080b12;
     }
 
     textarea {
-      min-height: 130px;
+      min-height: 140px;
+
       resize: vertical;
     }
 
-    /* FOOTER */
+    .form-note {
+      color: #7f8ca0;
 
-    footer {
+      font-size: 12px;
+
+      margin-top: 12px;
+
       text-align: center;
-      padding: 30px;
-      background: #0d111a;
-      color: #9da8ba;
-      border-top: 1px solid #202838;
     }
 
-    /* MOBILE */
 
-    @media (max-width: 800px) {
+    /* =====================================================
+       CONTACT
+    ===================================================== */
 
-      header {
-        position: relative;
-      }
+    .contact-grid {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 15px;
+
+      max-width: 900px;
+
+      margin: auto;
+    }
+
+    .contact-item {
+      background: var(--card);
+
+      padding: 20px;
+
+      border-radius: 14px;
+
+      border: 1px solid var(--border);
+    }
+
+    .contact-item strong {
+      display: block;
+
+      margin-bottom: 6px;
+    }
+
+    .contact-item a {
+      color: var(--blue);
+
+      text-decoration: none;
+
+      word-break: break-word;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-buttons {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 28px;
+    }
+
+
+    /* =====================================================
+       FAQ
+    ===================================================== */
+
+    .faq {
+      max-width: 850px;
+
+      margin: auto;
+    }
+
+    details {
+      background: var(--card);
+
+      border: 1px solid var(--border);
+
+      border-radius: 14px;
+
+      padding: 18px 20px;
+
+      margin-bottom: 12px;
+    }
+
+    summary {
+      cursor: pointer;
+
+      font-weight: 700;
+
+      color: #ffffff;
+    }
+
+    details p {
+      color: var(--muted);
+
+      margin-top: 12px;
+
+      font-size: 14px;
+    }
+
+
+    /* =====================================================
+       CTA
+    ===================================================== */
+
+    .cta {
+      max-width: 950px;
+
+      margin: auto;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(56, 169, 255, 0.11),
+          rgba(16, 22, 34, 0.9)
+        );
+
+      border: 1px solid rgba(56, 169, 255, 0.25);
+
+      border-radius: 24px;
+
+      padding: 55px 25px;
+    }
+
+    .cta h2 {
+      font-size: clamp(30px, 5vw, 45px);
+
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      color: var(--muted);
+
+      max-width: 650px;
+
+      margin: auto auto 25px;
+    }
+
+
+    /* =====================================================
+       FLOATING WHATSAPP
+    ===================================================== */
+
+    .whatsapp-float {
+      position: fixed;
+
+      right: 20px;
+      bottom: 20px;
+
+      width: 56px;
+      height: 56px;
+
+      border-radius: 50%;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      background: var(--success);
+
+      color: #ffffff;
+
+      text-decoration: none;
+
+      font-size: 27px;
+
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35);
+
+      z-index: 999;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+      background: var(--bg2);
+
+      border-top: 1px solid var(--border);
+
+      padding: 40px 6%;
+
+      text-align: center;
+
+      color: #9da8ba;
+    }
+
+    .footer-brand {
+      color: #ffffff;
+
+      font-size: 20px;
+
+      font-weight: 800;
+
+      margin-bottom: 8px;
+    }
+
+    .footer-text {
+      max-width: 550px;
+
+      margin: auto;
+
+      font-size: 14px;
+    }
+
+    .footer-links {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 15px;
+
+      margin: 20px 0;
+    }
+
+    .footer-links a {
+      color: #aeb8c8;
+
+      text-decoration: none;
+
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: var(--blue);
+    }
+
+    .copyright {
+      margin-top: 20px;
+
+      padding-top: 20px;
+
+      border-top: 1px solid var(--border);
+
+      font-size: 12px;
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 1000px) {
 
       nav {
         flex-direction: column;
       }
 
-      ul {
+      nav ul {
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
       }
 
       .hero {
-        min-height: auto;
         flex-direction: column;
+
         text-align: center;
-        padding-top: 60px;
+
+        padding-top: 70px;
       }
 
-      .hero img {
-        width: 240px;
-        height: 240px;
+      .hero-text {
+        max-width: 800px;
       }
 
-      .cards {
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-trust {
+        text-align: center;
+      }
+
+      .about-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero h1 {
-        font-size: 45px;
+      .skill-groups {
+        grid-template-columns: 1fr;
       }
+
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
     }
+
+
+    @media (max-width: 800px) {
+
+      section {
+        padding: 75px 5%;
+      }
+
+      .cards,
+      .pricing,
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image img {
+        width: 260px;
+        height: 260px;
+      }
+
+      .hero h1 {
+        font-size: clamp(42px, 12vw, 60px);
+      }
+
+      .title h2 {
+        font-size: 34px;
+      }
+
+    }
+
+
+    @media (max-width: 520px) {
+
+      header {
+        padding: 12px 4%;
+      }
+
+      nav ul {
+        gap: 10px;
+      }
+
+      nav ul a {
+        font-size: 12px;
+      }
+
+      nav ul .btn {
+        padding: 9px 13px;
+      }
+
+      .logo {
+        font-size: 18px;
+      }
+
+      .logo img {
+        width: 39px;
+        height: 39px;
+      }
+
+      .hero-image img {
+        width: 220px;
+        height: 220px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      form {
+        padding: 20px;
+      }
+
+      .whatsapp-float {
+        width: 52px;
+        height: 52px;
+
+        right: 15px;
+        bottom: 15px;
+      }
+
+    }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- ================= NAVBAR ================= -->
+
+  <!-- =====================================================
+       NAVBAR
+  ===================================================== -->
 
   <header>
+
     <nav>
 
-      <div class="logo">
-        <img src="srs.pm.jpeg" alt="SomyaRanjan Logo">
-        <span>SomyaRanjan</span>
-      </div>
+      <a href="#home" class="logo">
+
+        <img
+          src="srs.pm.jpeg"
+          alt="SRS Logo"
+        >
+
+        <span>SRS</span>
+
+      </a>
+
 
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#contact">Contact</a></li>
+
         <li>
-          <a href="#register" class="btn">Register</a>
+          <a href="#home">Home</a>
         </li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+          <a href="#services">Services</a>
+        </li>
+
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+          <a href="#pricing">Pricing</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
+        <li>
+          <a href="#register" class="btn">
+            Start a Project →
+          </a>
+        </li>
+
       </ul>
 
     </nav>
+
   </header>
 
 
-  <!-- ================= HOME ================= -->
 
-  <section id="home" class="hero">
+  <!-- =====================================================
+       HERO
+  ===================================================== -->
 
-    <div class="hero-text">
+  <section id="home">
 
-      <small>CREATIVE DESIGNER</small>
+    <div class="hero">
 
-      <h1>
-        Hi, I'm
-        <span class="blue">SomyaRanjan Sahani</span>
-      </h1>
+      <div class="hero-text">
 
-      <p>
-        I create modern websites, graphics and logos
-        with a clean, professional and creative approach.
+        <small>
+          HELLO, I'M SOMYARANJAN 👋
+        </small>
+
+
+        <h1>
+          I Build Modern
+          <span class="blue">
+            Websites & Digital Experiences.
+          </span>
+        </h1>
+
+
+        <p>
+          I'm a B.Tech Computer Science Engineering student and
+          creative designer who builds modern, responsive websites,
+          graphics and brand identities for individuals, creators
+          and businesses.
+        </p>
+
+
+        <div class="hero-buttons">
+
+          <a
+            href="#projects"
+            class="btn"
+          >
+            View My Projects →
+          </a>
+
+
+          <a
+            href="#register"
+            class="btn btn-outline"
+          >
+            Start a Project →
+          </a>
+
+
+          <a
+            href="https://wa.me/917894742065?text=Hello%20SomyaRanjan%2C%20I%20want%20to%20discuss%20a%20project."
+            target="_blank"
+            rel="noopener"
+            class="btn whatsapp-btn"
+          >
+            WhatsApp Me →
+          </a>
+
+        </div>
+
+
+        <div class="hero-trust">
+
+          Web Design • Graphic Design • Logo Design
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-image">
+
+        <img
+          src="somya.pm.jpeg"
+          alt="SomyaRanjan Sahani"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       ABOUT
+  ===================================================== -->
+
+  <section id="about">
+
+    <div class="section-inner">
+
+      <div class="title">
+
+        <small>ABOUT ME</small>
+
+        <h2>
+          Turning Ideas Into Digital Experiences.
+        </h2>
+
+        <p>
+          Technology, creativity and design combined.
+        </p>
+
+      </div>
+
+
+      <div class="about-grid">
+
+
+        <div class="about-text">
+
+          <p>
+            I'm
+            <strong>SomyaRanjan Sahani</strong>,
+            a B.Tech Computer Science Engineering student
+            with a passion for technology, web development
+            and creative design.
+          </p>
+
+
+          <p>
+            I enjoy turning ideas into clean, modern and
+            user-friendly digital experiences. From designing
+            websites and logos to creating graphics, I focus
+            on combining creativity with technology to deliver
+            work that looks professional and feels easy to use.
+          </p>
+
+
+          <p>
+            My goal is simple:
+            <span class="about-highlight">
+              create useful, attractive and memorable digital work.
+            </span>
+          </p>
+
+        </div>
+
+
+        <div class="stats">
+
+
+          <div class="stat">
+
+            <div class="stat-icon">
+              🎓
+            </div>
+
+            <h3>
+              Education
+            </h3>
+
+            <p>
+              B.Tech CSE — 2nd Year
+            </p>
+
+          </div>
+
+
+          <div class="stat">
+
+            <div class="stat-icon">
+              💻
+            </div>
+
+            <h3>
+              Focus
+            </h3>
+
+            <p>
+              Web Development & Design
+            </p>
+
+          </div>
+
+
+          <div class="stat">
+
+            <div class="stat-icon">
+              🎨
+            </div>
+
+            <h3>
+              Creative
+            </h3>
+
+            <p>
+              Graphic & Logo Design
+            </p>
+
+          </div>
+
+
+          <div class="stat">
+
+            <div class="stat-icon">
+              🌐
+            </div>
+
+            <h3>
+              Availability
+            </h3>
+
+            <p>
+              Available for Projects
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       SKILLS
+  ===================================================== -->
+
+  <section id="skills">
+
+    <div class="section-inner">
+
+      <div class="title">
+
+        <small>MY SKILLS</small>
+
+        <h2>
+          Skills & Expertise
+        </h2>
+
+        <p>
+          A combination of technical, creative and professional skills.
+        </p>
+
+      </div>
+
+
+      <div class="skill-groups">
+
+
+        <div class="skill-group">
+
+          <h3>
+            💻 Development
+          </h3>
+
+          <div class="skills">
+
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Python</span>
+            <span class="skill">Java</span>
+            <span class="skill">SQL</span>
+
+          </div>
+
+        </div>
+
+
+        <div class="skill-group">
+
+          <h3>
+            🎨 Design
+          </h3>
+
+          <div class="skills">
+
+            <span class="skill">Web Design</span>
+            <span class="skill">UI Design</span>
+            <span class="skill">Graphic Design</span>
+            <span class="skill">Logo Design</span>
+            <span class="skill">Branding</span>
+
+          </div>
+
+        </div>
+
+
+        <div class="skill-group">
+
+          <h3>
+            🚀 Professional
+          </h3>
+
+          <div class="skills">
+
+            <span class="skill">Problem Solving</span>
+            <span class="skill">Creativity</span>
+            <span class="skill">Communication</span>
+            <span class="skill">Responsive Design</span>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       SERVICES
+  ===================================================== -->
+
+  <section id="services">
+
+    <div class="section-inner">
+
+      <div class="title">
+
+        <small>SERVICES</small>
+
+        <h2>
+          What I Can Do For You
+        </h2>
+
+        <p>
+          Creative solutions designed around your needs.
+        </p>
+
+      </div>
+
+
+      <div class="cards">
+
+
+        <!-- WEB -->
+
+        <div class="card">
+
+          <div class="card-icon">
+            🌐
+          </div>
+
+          <h3>
+            Web Design
+          </h3>
+
+          <p>
+            Modern, responsive and user-friendly websites
+            designed to give your brand a strong online presence.
+          </p>
+
+
+          <ul>
+
+            <li>
+              Responsive Design
+            </li>
+
+            <li>
+              Mobile Friendly Layout
+            </li>
+
+            <li>
+              Modern UI
+            </li>
+
+            <li>
+              Custom Pages
+            </li>
+
+            <li>
+              Deployment
+            </li>
+
+          </ul>
+
+
+          <div class="starting">
+            Starting from ₹5,000
+          </div>
+
+        </div>
+
+
+
+        <!-- GRAPHIC -->
+
+        <div class="card">
+
+          <div class="card-icon">
+            🎨
+          </div>
+
+          <h3>
+            Graphic Design
+          </h3>
+
+          <p>
+            Eye-catching graphics created for social media,
+            businesses, promotions and digital platforms.
+          </p>
+
+
+          <ul>
+
+            <li>
+              Social Media Graphics
+            </li>
+
+            <li>
+              Posters
+            </li>
+
+            <li>
+              Banners
+            </li>
+
+            <li>
+              Promotional Designs
+            </li>
+
+          </ul>
+
+
+          <div class="starting">
+            Starting from ₹1,200
+          </div>
+
+        </div>
+
+
+
+        <!-- LOGO -->
+
+        <div class="card">
+
+          <div class="card-icon">
+            ✨
+          </div>
+
+          <h3>
+            Logo & Branding
+          </h3>
+
+          <p>
+            Unique and memorable logo designs that help
+            create a strong visual identity for your brand.
+          </p>
+
+
+          <ul>
+
+            <li>
+              Custom Logo
+            </li>
+
+            <li>
+              Multiple Concepts
+            </li>
+
+            <li>
+              High-Quality Files
+            </li>
+
+            <li>
+              Brand-ready Design
+            </li>
+
+          </ul>
+
+
+          <div class="starting">
+            Starting from ₹700
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       PROJECTS
+  ===================================================== -->
+
+  <section id="projects">
+
+    <div class="section-inner">
+
+      <div class="title">
+
+        <small>MY WORK</small>
+
+        <h2>
+          Featured Projects
+        </h2>
+
+        <p>
+          A selection of projects and creative work.
+        </p>
+
+      </div>
+
+
+      <div class="projects">
+
+
+        <div class="project">
+
+          <div class="project-number">
+            PROJECT 01
+          </div>
+
+          <h3>
+            Personal Portfolio Website
+          </h3>
+
+          <p>
+            A modern responsive portfolio website designed
+            to showcase my skills, services and creative work.
+          </p>
+
+          <div class="project-meta">
+            HTML • CSS • JavaScript
+          </div>
+
+          <a
+            href="https://somyasahani77-create.github.io/portfolio-webside/"
+            target="_blank"
+            rel="noopener"
+            class="project-link"
+          >
+            View Project →
+          </a>
+
+        </div>
+
+
+
+        <div class="project">
+
+          <div class="project-number">
+            PROJECT 02
+          </div>
+
+          <h3>
+            Creative Brand Identity
+          </h3>
+
+          <p>
+            A visual identity concept focused on simplicity,
+            modern design and brand recognition.
+          </p>
+
+          <div class="project-meta">
+            Branding • Logo Design
+          </div>
+
+          <a
+            href="#contact"
+            class="project-link"
+          >
+            Discuss a Similar Project →
+          </a>
+
+        </div>
+
+
+
+        <div class="project">
+
+          <div class="project-number">
+            PROJECT 03
+          </div>
+
+          <h3>
+            Responsive Business Website
+          </h3>
+
+          <p>
+            A clean and responsive website concept designed
+            for a modern business and its customers.
+          </p>
+
+          <div class="project-meta">
+            HTML • CSS • JavaScript
+          </div>
+
+          <a
+            href="#register"
+            class="project-link"
+          >
+            Start a Website Project →
+          </a>
+
+        </div>
+
+
+
+        <div class="project">
+
+          <div class="project-number">
+            PROJECT 04
+          </div>
+
+          <h3>
+            Graphic Design Collection
+          </h3>
+
+          <p>
+            A collection of creative digital graphics designed
+            for promotional and social media use.
+          </p>
+
+          <div class="project-meta">
+            Graphic Design • Social Media
+          </div>
+
+          <a
+            href="#contact"
+            class="project-link"
+          >
+            Request Graphic Design →
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       HOW IT WORKS
+  ===================================================== -->
+
+  <section>
+
+    <div class="section-inner">
+
+      <div class="title">
+
+        <small>PROCESS</small>
+
+        <h2>
+          How It Works
+        </h2>
+
+        <p>
+          A simple process from idea to final delivery.
+        </p>
+
+      </div>
+
+
+      <div class="steps">
+
+
+        <div class="step">
+
+          <div class="step-number">
+            01
+          </div>
+
+          <h3>
+            Tell Me About Your Project
+          </h3>
+
+          <p>
+            Share your idea, requirements and goals.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">
+            02
+          </div>
+
+          <h3>
+            Discuss & Plan
+          </h3>
+
+          <p>
+            We'll discuss the design, features, timeline and budget.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">
+            03
+          </div>
+
+          <h3>
+            Design & Development
+          </h3>
+
+          <p>
+            I'll turn the approved idea into a functional digital experience.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">
+            04
+          </div>
+
+          <h3>
+            Launch
+          </h3>
+
+          <p>
+            After final approval, your project is ready to go live.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       PRICING
+  ===================================================== -->
+
+  <section id="pricing">
+
+    <div class="section-inner">
+
+      <div class="title">
+
+        <small>PRICING</small>
+
+        <h2>
+          Simple & Transparent Pricing
+        </h2>
+
+        <p>
+          Choose a package that fits your project.
+        </p>
+
+      </div>
+
+
+      <div class="pricing">
+
+
+        <!-- BASIC -->
+
+        <div class="price-card">
+
+          <h3>
+            🌱 BASIC
+          </h3>
+
+          <div class="price">
+            ₹5,000
+          </div>
+
+
+          <ul>
+
+            <li>
+              1–3 Pages
+            </li>
+
+            <li>
+              Responsive Design
+            </li>
+
+            <li>
+              Mobile Friendly
+            </li>
+
+            <li>
+              Contact Section
+            </li>
+
+            <li>
+              Basic Deployment
+            </li>
+
+          </ul>
+
+
+          <a
+            href="#register"
+            class="btn"
+          >
+            Choose Basic →
+          </a>
+
+        </div>
+
+
+
+        <!-- STANDARD -->
+
+        <div class="price-card popular">
+
+          <div class="popular-badge">
+            MOST POPULAR
+          </div>
+
+          <h3>
+            🚀 STANDARD
+          </h3>
+
+          <div class="price">
+            ₹10,000
+          </div>
+
+
+          <ul>
+
+            <li>
+              5–7 Pages
+            </li>
+
+            <li>
+              Custom Design
+            </li>
+
+            <li>
+              Responsive Layout
+            </li>
+
+            <li>
+              Contact Form
+            </li>
+
+            <li>
+              Social Media Integration
+            </li>
+
+            <li>
+              Deployment
+            </li>
+
+          </ul>
+
+
+          <a
+            href="#register"
+            class="btn"
+          >
+            Choose Standard →
+          </a>
+
+        </div>
+
+
+
+        <!-- PREMIUM -->
+
+        <div class="price-card">
+
+          <h3>
+            👑 PREMIUM
+          </h3>
+
+          <div class="price">
+            ₹20,000+
+          </div>
+
+
+          <ul>
+
+            <li>
+              Custom Website
+            </li>
+
+            <li>
+              Advanced UI
+            </li>
+
+            <li>
+              Multiple Pages
+            </li>
+
+            <li>
+              Custom Features
+            </li>
+
+            <li>
+              Deployment
+            </li>
+
+            <li>
+              Post-launch Support
+            </li>
+
+          </ul>
+
+
+          <a
+            href="#register"
+            class="btn"
+          >
+            Choose Premium →
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+      <p class="pricing-note">
+        Final pricing may vary depending on project requirements and complexity.
       </p>
 
-      <a href="#register" class="btn">
-        Start Your Project
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       START A PROJECT
+  ===================================================== -->
+
+  <section id="register">
+
+    <div class="section-inner">
+
+      <div class="title">
+
+        <small>START A PROJECT</small>
+
+        <h2>
+          Have a Project in Mind? Let's Build It.
+        </h2>
+
+        <p>
+          Tell me what you're looking for and I'll get back
+          to you as soon as possible.
+        </p>
+
+      </div>
+
+
+      <div class="form-wrapper">
+
+
+        <form
+          action="https://formsubmit.co/sahanisomya777@gmail.com"
+          method="POST"
+        >
+
+
+          <!-- FORM SUBMIT SETTINGS -->
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="New SRS Portfolio Project Request"
+          >
+
+          <input
+            type="hidden"
+            name="_captcha"
+            value="false"
+          >
+
+          <input
+            type="hidden"
+            name="_template"
+            value="table"
+          >
+
+          <input
+            type="hidden"
+            name="_next"
+            value="https://somyasahani77-create.github.io/portfolio-webside/#register"
+          >
+
+
+          <div class="form-row">
+
+
+            <div>
+
+              <label for="fullname">
+                Full Name
+              </label>
+
+              <input
+                id="fullname"
+                type="text"
+                name="Full Name"
+                placeholder="Enter your name"
+                autocomplete="name"
+                required
+              >
+
+            </div>
+
+
+            <div>
+
+              <label for="email">
+                Email Address
+              </label>
+
+              <input
+                id="email"
+                type="email"
+                name="Email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required
+              >
+
+            </div>
+
+
+          </div>
+
+
+
+          <div class="form-row">
+
+
+            <div>
+
+              <label for="phone">
+                Phone / WhatsApp
+              </label>
+
+              <input
+                id="phone"
+                type="tel"
+                name="Phone / WhatsApp"
+                placeholder="Enter your number"
+                autocomplete="tel"
+                required
+              >
+
+            </div>
+
+
+            <div>
+
+              <label for="service">
+                Select Service
+              </label>
+
+              <select
+                id="service"
+                name="Service"
+                required
+              >
+
+                <option value="">
+                  Select Service
+                </option>
+
+                <option value="Web Design">
+                  Web Design
+                </option>
+
+                <option value="Graphic Design">
+                  Graphic Design
+                </option>
+
+                <option value="Logo Design">
+                  Logo Design
+                </option>
+
+                <option value="Other">
+                  Other
+                </option>
+
+              </select>
+
+            </div>
+
+
+          </div>
+
+
+
+          <div class="form-row">
+
+
+            <div>
+
+              <label for="budget">
+                Budget
+              </label>
+
+              <select
+                id="budget"
+                name="Budget"
+                required
+              >
+
+                <option value="">
+                  Select Budget
+                </option>
+
+                <option value="₹1,000 – ₹5,000">
+                  ₹1,000 – ₹5,000
+                </option>
+
+                <option value="₹5,000 – ₹10,000">
+                  ₹5,000 – ₹10,000
+                </option>
+
+                <option value="₹10,000 – ₹20,000">
+                  ₹10,000 – ₹20,000
+                </option>
+
+                <option value="₹20,000+">
+                  ₹20,000+
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div>
+
+              <label for="country">
+                Country
+              </label>
+
+              <input
+                id="country"
+                type="text"
+                name="Country"
+                placeholder="Country"
+                autocomplete="country-name"
+                required
+              >
+
+            </div>
+
+
+          </div>
+
+
+
+          <label for="details">
+            Project Details
+          </label>
+
+          <textarea
+            id="details"
+            name="Project Details"
+            placeholder="Tell me about your project, requirements, pages, design style, etc."
+            required
+          ></textarea>
+
+
+          <button
+            type="submit"
+            class="btn"
+            style="width:100%;"
+          >
+            Send Project Request →
+          </button>
+
+
+          <p class="form-note">
+            Your project details will be sent to my email through FormSubmit.
+          </p>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       CONTACT
+  ===================================================== -->
+
+  <section id="contact">
+
+    <div class="section-inner">
+
+      <div class="title">
+
+        <small>CONTACT</small>
+
+        <h2>
+          Let's Work Together
+        </h2>
+
+        <p>
+          Have an idea, question or project?
+          Feel free to reach out.
+        </p>
+
+      </div>
+
+
+      <div class="contact-grid">
+
+
+        <div class="contact-item">
+
+          <strong>
+            📧 Email
+          </strong>
+
+          <a href="mailto:sahanisomya777@gmail.com">
+            sahanisomya777@gmail.com
+          </a>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <strong>
+            📱 WhatsApp
+          </strong>
+
+          <a
+            href="https://wa.me/917894742065"
+            target="_blank"
+            rel="noopener"
+          >
+            +91 78947 42065
+          </a>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <strong>
+            📞 Phone
+          </strong>
+
+          <a href="tel:+919078508209">
+            +91 90785 08209
+          </a>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <strong>
+            📸 Instagram
+          </strong>
+
+          <a
+            href="https://www.instagram.com/srs.degine?stkn=OXAzeXM5NXFwNXlq"
+            target="_blank"
+            rel="noopener"
+          >
+            @srs.degine
+          </a>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <strong>
+            💼 LinkedIn
+          </strong>
+
+          <a
+            href="https://www.linkedin.com/in/sahani-somya-394a57402?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            target="_blank"
+            rel="noopener"
+          >
+            Sahani Somya
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="contact-buttons">
+
+
+        <a
+          href="https://wa.me/917894742065?text=Hello%20SomyaRanjan%2C%20I%20want%20to%20discuss%20a%20project."
+          target="_blank"
+          rel="noopener"
+          class="btn whatsapp-btn"
+        >
+          💬 WhatsApp Me →
+        </a>
+
+
+        <a
+          href="mailto:sahanisomya777@gmail.com?subject=Project%20Inquiry"
+          class="btn btn-outline"
+        >
+          📧 Email Me →
+        </a>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FAQ
+  ===================================================== -->
+
+  <section>
+
+    <div class="section-inner">
+
+      <div class="title">
+
+        <small>FAQ</small>
+
+        <h2>
+          Frequently Asked Questions
+        </h2>
+
+      </div>
+
+
+      <div class="faq">
+
+
+        <details>
+
+          <summary>
+            How long does a website take?
+          </summary>
+
+          <p>
+            Depending on the project's size and requirements,
+            a website can take anywhere from a few days to several weeks.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Do you create custom designs?
+          </summary>
+
+          <p>
+            Yes. Each project can be designed according to
+            the client's requirements and brand identity.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Can you deploy the website?
+          </summary>
+
+          <p>
+            Yes, I can help deploy the completed website and
+            make it publicly accessible.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Can I request changes?
+          </summary>
+
+          <p>
+            Yes. Revisions can be discussed before the final delivery.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            How do I start a project?
+          </summary>
+
+          <p>
+            Simply fill out the project request form or contact
+            me directly through WhatsApp or email.
+          </p>
+
+        </details>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FINAL CTA
+  ===================================================== -->
+
+  <section>
+
+    <div class="cta">
+
+      <h2>
+        Ready To Build Something Great?
+      </h2>
+
+      <p>
+        Let's turn your idea into a modern website,
+        creative design or memorable brand identity.
+      </p>
+
+
+      <div class="hero-buttons" style="justify-content:center;">
+
+        <a
+          href="#register"
+          class="btn"
+        >
+          Start a Project →
+        </a>
+
+
+        <a
+          href="https://wa.me/917894742065?text=Hello%20SomyaRanjan%2C%20I%20want%20to%20start%20a%20project."
+          target="_blank"
+          rel="noopener"
+          class="btn whatsapp-btn"
+        >
+          WhatsApp Me →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
+
+  <footer>
+
+    <div class="footer-brand">
+      SRS
+    </div>
+
+
+    <p class="footer-text">
+      Building ideas into modern digital experiences.
+    </p>
+
+
+    <div class="footer-links">
+
+      <a href="#home">
+        Home
+      </a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#skills">
+        Skills
+      </a>
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#projects">
+        Projects
+      </a>
+
+      <a href="#pricing">
+        Pricing
+      </a>
+
+      <a href="#contact">
+        Contact
       </a>
 
     </div>
 
-    <img
-      src="somya.pm.jpeg"
-      alt="SomyaRanjan Sahani"
-    >
-
-  </section>
-
-
-  <!-- ================= ABOUT ================= -->
-
-  <section id="about">
-
-    <div class="title">
-      <h2>Who I Am</h2>
-    </div>
-
-    <div class="about">
-
-      <p>
-        I'm <b>SomyaRanjan Sahani</b>, a creative designer focused on
-        Web Design, Graphic Design and Logo Design. I combine modern
-        aesthetics with practical design to create work that looks
-        professional and communicates clearly.
-      </p>
-
-      <h3>Education</h3>
-
-      <p>
-        <b>B.Tech — Computer Science Engineering</b><br>
-        2nd Year
-      </p>
-
-      <p style="margin-top:20px;">
-        Along with my technical background, I continuously work on
-        improving my design and creative skills.
-      </p>
-
-    </div>
-
-
-    <!-- WHAT I CAN DO FOR YOU -->
-
-    <div class="title" style="margin-top:60px;">
-
-      <h2>What I Can Do For You</h2>
-
-      <p>
-        Creative solutions designed around your needs.
-      </p>
-
-    </div>
-
-    <div class="cards">
-
-      <div class="card">
-        <h3>🌐 Web Design</h3>
-
-        <p>
-          I can create clean, modern and responsive websites
-          that give your brand a professional online presence.
-        </p>
-      </div>
-
-
-      <div class="card">
-        <h3>🎨 Graphic Design</h3>
-
-        <p>
-          I can design posters, banners, social media graphics
-          and other visual content for your brand.
-        </p>
-      </div>
-
-
-      <div class="card">
-        <h3>✦ Logo Design</h3>
-
-        <p>
-          I can create simple, unique and professional logos
-          that represent your brand identity.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= SKILLS ================= -->
-
-  <section id="skills">
-
-    <div class="title">
-
-      <h2>My Skills</h2>
-
-      <p>
-        Creative and technical skills.
-      </p>
-
-    </div>
-
-    <div class="skills">
-
-      <div class="skill">Web Designing</div>
-      <div class="skill">Graphic Designing</div>
-      <div class="skill">Logo Design</div>
-      <div class="skill">HTML</div>
-      <div class="skill">Java</div>
-      <div class="skill">SQL</div>
-      <div class="skill">Python</div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= SERVICES ================= -->
-
-  <section id="services">
-
-    <div class="title">
-
-      <h2>My Services</h2>
-
-      <p>
-        Professional design services for your ideas.
-      </p>
-
-    </div>
-
-    <div class="cards">
-
-      <div class="card">
-
-        <h3>Web Design</h3>
-
-        <p>
-          Modern, responsive and user-friendly website designs.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <h3>Graphic Design</h3>
-
-        <p>
-          Posters, banners, social media graphics and
-          creative visual content.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <h3>Logo Design</h3>
-
-        <p>
-          Clean, unique and memorable logos for your brand.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= PRICING ================= -->
-
-  <section id="pricing">
-
-    <div class="title">
-
-      <h2>Pricing</h2>
-
-      <p>
-        Starting prices. Final price depends on project requirements.
-      </p>
-
-    </div>
-
-    <div class="cards">
-
-      <div class="card">
-
-        <h3>Logo Design</h3>
-
-        <div class="price">
-          ₹700 – ₹1,800
-        </div>
-
-        <p>
-          Professional custom logo design.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <h3>Graphic Design</h3>
-
-        <div class="price">
-          ₹1,200 – ₹3,500
-        </div>
-
-        <p>
-          Posters, banners and social media graphics.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <h3>Web Design</h3>
-
-        <div class="price">
-          ₹5,000 – ₹20,000+
-        </div>
-
-        <p>
-          Responsive and modern website design.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= CONTACT ================= -->
-
-  <section id="contact">
-
-    <div class="title">
-
-      <h2>Contact Me</h2>
-
-      <p>
-        Let's discuss your next project.
-      </p>
-
-    </div>
-
-    <div class="contact-box">
-
-      <div class="contact-item">
-
-        📧 <b>Email:</b>
-
-        <a href="mailto:sahanisomya777@gmail.com">
-          sahanisomya777@gmail.com
-        </a>
-
-      </div>
-
-
-      <div class="contact-item">
-
-        📱 <b>Phone:</b>
-
-        <a href="tel:+919078508209">
-          +91 90785 08209
-        </a>
-
-      </div>
-
-
-      <div class="contact-item">
-
-        📸 <b>Instagram:</b>
-
-        <a
-          href="https://www.instagram.com/srs.degine?stkn=OXAzeXM5NXFwNXlq"
-          target="_blank"
-        >
-          @srs.degine
-        </a>
-
-      </div>
-
-
-      <div class="contact-item">
-
-        💼 <b>LinkedIn:</b>
-
-        <a
-          href="https://www.linkedin.com/in/sahani-somya-394a57402?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-          target="_blank"
-        >
-          Sahani Somya
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= START YOUR PROJECT / REGISTER ================= -->
-
-  <section id="register">
-
-    <div class="title">
-
-      <h2>Start Your Project</h2>
-
-      <p>
-        Tell me about your project and let's get started.
-      </p>
-
-    </div>
-
-
-    <form
-      action="https://formsubmit.co/sahanisomya777@gmail.com"
-      method="POST"
-    >
-
-      <input
-        type="hidden"
-        name="_subject"
-        value="New Portfolio Project Registration"
-      >
-
-      <input
-        type="hidden"
-        name="_captcha"
-        value="false"
-      >
-
-      <input
-        type="hidden"
-        name="_template"
-        value="table"
-      >
-
-
-      <input
-        type="text"
-        name="Full Name"
-        placeholder="Full Name"
-        required
-      >
-
-
-      <input
-        type="email"
-        name="Email"
-        placeholder="Email Address"
-        required
-      >
-
-
-      <input
-        type="tel"
-        name="Phone"
-        placeholder="Phone Number with Country Code"
-        required
-      >
-
-
-      <input
-        type="text"
-        name="Country"
-        placeholder="Country"
-        required
-      >
-
-
-      <input
-        type="text"
-        name="State"
-        placeholder="State"
-        required
-      >
-
-
-      <select name="Service" required>
-
-        <option value="">
-          Select Service
-        </option>
-
-        <option value="Logo Design">
-          Logo Design
-        </option>
-
-        <option value="Graphic Design">
-          Graphic Design
-        </option>
-
-        <option value="Web Design">
-          Web Design
-        </option>
-
-      </select>
-
-
-      <textarea
-        name="Project Details"
-        placeholder="Tell me about your project..."
-        required
-      ></textarea>
-
-
-      <button
-        type="submit"
-        class="btn"
-      >
-        Register / Send Project
-      </button>
-
-    </form>
-
-  </section>
-
-
-  <!-- ================= FOOTER ================= -->
-
-  <footer>
 
     <p>
+      Web Design • Graphic Design • Logo Design
+    </p>
+
+
+    <p class="copyright">
       © 2026 SomyaRanjan Sahani. All Rights Reserved.
     </p>
 
   </footer>
+
+
+
+  <!-- =====================================================
+       FLOATING WHATSAPP
+  ===================================================== -->
+
+  <a
+    href="https://wa.me/917894742065?text=Hello%20SomyaRanjan%2C%20I%20found%20your%20portfolio%20and%20want%20to%20discuss%20a%20project."
+    target="_blank"
+    rel="noopener"
+    class="whatsapp-float"
+    aria-label="Chat with me on WhatsApp"
+    title="Chat on WhatsApp"
+  >
+    💬
+  </a>
+
 
 </body>
 </html>
